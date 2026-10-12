@@ -9,8 +9,8 @@ import java.util.List;
 
 public interface IClienteDao extends JpaRepository<Cliente, Long> {
 
-    // Consulta JPQL personalizada para obtener todas las regiones
-    // JPQL usa el nombre de la clase Java, no el nombre de la tabla SQL
+    // JpaRepository ya proporciona findAll(Pageable pageable).
+
     @Query("from Region")
     List<Region> findAllRegiones();
 }

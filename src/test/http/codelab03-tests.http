@@ -1,0 +1,110 @@
+
+### Codelab 03 — Paginación, transacciones y validaciones
+
+### 1. Listar todos los clientes
+GET http://localhost:8080/api/v1/cliente-service/clientes
+Accept: application/json
+
+###
+
+### 2. Página 0 (primeros 4 clientes)
+GET http://localhost:8080/api/v1/cliente-service/clientes/page/0
+Accept: application/json
+
+###
+
+### 3. Página 1 (clientes 5-8)
+GET http://localhost:8080/api/v1/cliente-service/clientes/page/1
+Accept: application/json
+
+###
+
+### 4. Página 2 (clientes 9-12)
+GET http://localhost:8080/api/v1/cliente-service/clientes/page/2
+Accept: application/json
+
+###
+
+### 5. Página que no existe
+GET http://localhost:8080/api/v1/cliente-service/clientes/page/100
+Accept: application/json
+
+###
+
+### 6. POST inválido
+POST http://localhost:8080/api/v1/cliente-service/clientes
+Content-Type: application/json
+
+{
+  "nombre": "",
+  "apellido": "",
+  "email": "no-es-email",
+  "region": null
+}
+
+###
+
+### 7. POST válido
+POST http://localhost:8080/api/v1/cliente-service/clientes
+Content-Type: application/json
+
+{
+  "nombre": "Donald",
+  "apellido": "Knuth",
+  "email": "knuth@stanford.edu",
+  "foto": "knuth.jpg",
+  "region": { "id": 3 }
+}
+
+###
+
+### 8. GET por ID existente
+GET http://localhost:8080/api/v1/cliente-service/clientes/1
+Accept: application/json
+
+###
+
+### 9. GET por ID inexistente
+GET http://localhost:8080/api/v1/cliente-service/clientes/999
+Accept: application/json
+
+###
+
+### 10. PUT válido
+PUT http://localhost:8080/api/v1/cliente-service/clientes/1
+Content-Type: application/json
+
+{
+  "nombre": "Linus",
+  "apellido": "Benedict Torvalds",
+  "email": "linus@kernel.org",
+  "foto": "linus-updated.jpg",
+  "region": { "id": 4 }
+}
+
+###
+
+### 11. PUT inválido
+PUT http://localhost:8080/api/v1/cliente-service/clientes/1
+Content-Type: application/json
+
+{
+  "nombre": "Linus",
+  "apellido": "Torvalds",
+  "email": "linus-sin-arroba",
+  "region": { "id": 4 }
+}
+
+###
+
+### 12. DELETE existente
+DELETE http://localhost:8080/api/v1/cliente-service/clientes/12
+Accept: application/json
+
+###
+
+### 13. Listar regiones
+GET http://localhost:8080/api/v1/cliente-service/clientes/regiones
+Accept: application/json
+
+###
