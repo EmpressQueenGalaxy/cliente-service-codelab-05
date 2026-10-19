@@ -1,8 +1,8 @@
 
-package com.denkitronik.clienteservice.domain.repositories;
+package denkitronik.domain.repositories;
 
-import com.denkitronik.clienteservice.domain.entities.Cliente;
-import com.denkitronik.clienteservice.domain.entities.Region;
+import denkitronik.domain.entities.Cliente;
+import denkitronik.domain.entities.Region;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import java.util.List;

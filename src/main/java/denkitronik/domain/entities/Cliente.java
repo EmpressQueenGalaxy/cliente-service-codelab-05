@@ -1,5 +1,5 @@
 
-package com.denkitronik.clienteservice.domain.entities;
+package denkitronik.domain.entities;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;

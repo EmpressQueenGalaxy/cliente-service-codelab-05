@@ -1,11 +1,11 @@
 
-package com.denkitronik.clienteservice.domain.services;
+package denkitronik.domain.services;
 
-import com.denkitronik.clienteservice.domain.exception.ClienteNotFoundException;
-import com.denkitronik.clienteservice.domain.exception.ClienteServiceException;
-import com.denkitronik.clienteservice.domain.entities.Cliente;
-import com.denkitronik.clienteservice.domain.entities.Region;
-import com.denkitronik.clienteservice.domain.repositories.IClienteDao;
+import denkitronik.domain.exception.ClienteNotFoundException;
+import denkitronik.domain.exception.ClienteServiceException;
+import denkitronik.domain.entities.Cliente;
+import denkitronik.domain.entities.Region;
+import denkitronik.domain.repositories.IClienteDao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.data.domain.Page;

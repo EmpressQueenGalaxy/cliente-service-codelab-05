@@ -1,9 +1,9 @@
 
-package com.denkitronik.clienteservice.delivery.rest;
+package denkitronik.delivery.rest;
 
-import com.denkitronik.clienteservice.domain.entities.Cliente;
-import com.denkitronik.clienteservice.domain.entities.Region;
-import com.denkitronik.clienteservice.domain.services.IClienteService;
+import denkitronik.domain.entities.Cliente;
+import denkitronik.domain.entities.Region;
+import denkitronik.domain.services.IClienteService;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;

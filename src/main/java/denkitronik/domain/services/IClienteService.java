@@ -1,8 +1,10 @@
 
-package com.denkitronik.clienteservice.domain.services;
+package denkitronik.domain.services;
 
-import com.denkitronik.clienteservice.domain.entities.Cliente;
-import com.denkitronik.clienteservice.domain.entities.Region;
+import denkitronik.domain.entities.Cliente;
+import denkitronik.domain.entities.Region;
+import denkitronik.domain.exception.ClienteNotFoundException;
+import denkitronik.domain.exception.ClienteServiceException;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import java.util.List;
@@ -21,28 +23,28 @@ public interface IClienteService {
 
     /**
      * Busca un cliente por ID.
-     * @throws com.denkitronik.clienteservice.domain.exception.ClienteNotFoundException
+     * @throws ClienteNotFoundException
      *         si no existe un cliente con ese ID
      */
     Cliente findById(Long id);
 
     /**
      * Persiste un nuevo cliente.
-     * @throws com.denkitronik.clienteservice.domain.exception.ClienteServiceException
+     * @throws ClienteServiceException
      *         si ocurre un error de base de datos
      */
     Cliente save(Cliente cliente);
 
     /**
      * Actualiza los campos de un cliente existente preservando createAt.
-     * @throws com.denkitronik.clienteservice.domain.exception.ClienteNotFoundException
+     * @throws ClienteNotFoundException
      *         si no existe un cliente con ese ID
      */
     Cliente update(Long id, Cliente cliente);
 
     /**
      * Elimina un cliente por ID.
-     * @throws com.denkitronik.clienteservice.domain.exception.ClienteNotFoundException
+     * @throws ClienteNotFoundException
      *         si no existe un cliente con ese ID
      */
     void delete(Long id);
